@@ -22,4 +22,6 @@ jobs:
       run: go test -v ./...
       
     - name: Run
+      env:
+        TOKEN: ${{ secrets.VMESS_SERVER_TOKEN }}
       run: go run .
